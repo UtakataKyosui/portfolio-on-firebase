@@ -4,6 +4,15 @@ import { useMemo, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/blog')({
+  head: () => ({
+    meta: [
+      { title: 'Portfolio | ブログ' },
+      {
+        name: 'description',
+        content: '技術記事・設計に関する考察を発信しています。',
+      },
+    ],
+  }),
   component: BlogListPage,
 });
 
@@ -87,6 +96,7 @@ function BlogListPage() {
       <div className="flex flex-wrap justify-center gap-2">
         <button
           type="button"
+          aria-pressed={activeCategory === null}
           onClick={() => setActiveCategory(null)}
           className={cn(
             'rounded-full px-3 py-1 text-sm transition-colors',
@@ -101,6 +111,7 @@ function BlogListPage() {
           <button
             key={category}
             type="button"
+            aria-pressed={activeCategory === category}
             onClick={() => setActiveCategory(category)}
             className={cn(
               'rounded-full px-3 py-1 text-sm transition-colors',
@@ -138,7 +149,7 @@ function BlogListPage() {
           disabled
           className="rounded-md p-2 text-foreground/40 disabled:cursor-not-allowed"
         >
-          <ChevronLeft className="size-4" />
+          <ChevronLeft className="size-4" aria-hidden="true" />
         </button>
         <span className="text-foreground/70 text-sm">Page 1 of 4</span>
         <button
@@ -146,7 +157,7 @@ function BlogListPage() {
           aria-label="次のページ"
           className="rounded-md p-2 text-foreground/70 hover:bg-muted"
         >
-          <ChevronRight className="size-4" />
+          <ChevronRight className="size-4" aria-hidden="true" />
         </button>
       </div>
     </div>
