@@ -1,9 +1,11 @@
 import { expect, test } from '@rstest/core';
 import { render, screen } from '@testing-library/react';
-import App from '../src/App';
+import type React from 'react';
+import { Route } from '../src/routes/index';
 
 test('renders the main page', () => {
   const testMessage = 'Rsbuild with React';
-  render(<App />);
+  const HomePage = Route.options.component as () => React.ReactElement;
+  render(<HomePage />);
   expect(screen.getByText(testMessage)).toBeInTheDocument();
 });
