@@ -2,6 +2,16 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 
 export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      { title: 'Portfolio | ホーム' },
+      {
+        name: 'description',
+        content:
+          'フロントエンド設計とプロダクト開発を軸に、技術記事と制作実績を発信しています。',
+      },
+    ],
+  }),
   component: HomePage,
 });
 
