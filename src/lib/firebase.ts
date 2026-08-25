@@ -10,4 +10,5 @@ const firebaseConfig = {
   measurementId: import.meta.env.PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-export const firebaseApp: FirebaseApp = getApps()[0] ?? initializeApp(firebaseConfig);
+export const firebaseApp: FirebaseApp =
+  getApps()[0] ?? initializeApp(firebaseConfig);
