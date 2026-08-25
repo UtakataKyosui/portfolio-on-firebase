@@ -1,11 +1,19 @@
 import { expect, test } from '@rstest/core';
+import {
+  createMemoryHistory,
+  createRouter,
+  RouterProvider,
+} from '@tanstack/react-router';
 import { render, screen } from '@testing-library/react';
-import type React from 'react';
-import { Route } from '../src/routes/index';
+import { routeTree } from '../src/routeTree.gen';
 
-test('renders the main page', () => {
-  const testMessage = 'Rsbuild with React';
-  const HomePage = Route.options.component as () => React.ReactElement;
-  render(<HomePage />);
-  expect(screen.getByText(testMessage)).toBeInTheDocument();
+test('renders the main page', async () => {
+  const testMessage =
+    'I build digital experiences that blend form and function';
+  const router = createRouter({
+    routeTree,
+    history: createMemoryHistory({ initialEntries: ['/'] }),
+  });
+  render(<RouterProvider router={router} />);
+  expect(await screen.findByText(testMessage)).toBeInTheDocument();
 });
