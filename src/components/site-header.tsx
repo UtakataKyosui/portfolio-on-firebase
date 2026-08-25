@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
-  { to: '/', label: 'ホーム' },
+  { to: '/', label: 'ホーム', exact: true },
   { to: '/blog', label: 'ブログ' },
   { to: '/projects', label: 'プロジェクト' },
-  { to: '/#contact', label: 'お問い合わせ' },
+  { to: '/', hash: 'contact', label: 'お問い合わせ', exact: true },
 ] as const;
 
 export function SiteHeader() {
@@ -24,8 +24,10 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-6 sm:flex">
           {NAV_LINKS.map((link) => (
             <Link
-              key={link.to}
+              key={link.label}
               to={link.to}
+              hash={'hash' in link ? link.hash : undefined}
+              activeOptions={{ exact: 'exact' in link ? link.exact : false }}
               className="text-sm text-foreground/80 transition-colors hover:text-foreground"
               activeProps={{ className: 'text-foreground font-medium' }}
             >
@@ -44,7 +46,7 @@ export function SiteHeader() {
           aria-label={isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'}
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          {isMenuOpen ? <X /> : <Menu />}
+          {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </Button>
       </div>
 
@@ -55,8 +57,10 @@ export function SiteHeader() {
         <div className="flex flex-col gap-1 px-4 pb-4">
           {NAV_LINKS.map((link) => (
             <Link
-              key={link.to}
+              key={link.label}
               to={link.to}
+              hash={'hash' in link ? link.hash : undefined}
+              activeOptions={{ exact: 'exact' in link ? link.exact : false }}
               className="rounded-md px-2 py-2 text-sm text-foreground/80 transition-colors hover:bg-muted hover:text-foreground"
               activeProps={{ className: 'text-foreground font-medium' }}
               onClick={() => setIsMenuOpen(false)}

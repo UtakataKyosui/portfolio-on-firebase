@@ -23,11 +23,11 @@ export function SiteFooter() {
               key={label}
               href={href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-1 text-foreground/60 text-sm transition-colors hover:text-foreground"
             >
               {label}
-              <ExternalLink className="size-3.5" />
+              <ExternalLink className="size-3.5" aria-hidden="true" />
             </a>
           ))}
         </div>
