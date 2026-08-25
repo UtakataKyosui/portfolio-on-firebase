@@ -3,6 +3,15 @@ import { useMemo, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/projects')({
+  head: () => ({
+    meta: [
+      { title: 'Portfolio | プロジェクト' },
+      {
+        name: 'description',
+        content: '制作した実績を技術スタックとともに紹介しています。',
+      },
+    ],
+  }),
   component: FeaturedProjectsPage,
 });
 
@@ -67,6 +76,7 @@ function FeaturedProjectsPage() {
           <button
             key={filter}
             type="button"
+            aria-pressed={activeFilter === filter}
             onClick={() => setActiveFilter(filter)}
             className={cn(
               'rounded-full px-3 py-1 text-sm transition-colors',
