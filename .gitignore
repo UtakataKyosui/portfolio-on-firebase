@@ -1,0 +1,20 @@
+# Local
+.DS_Store
+*.local
+*.log*
+.env.local
+
+# Dist
+node_modules
+dist/
+
+# Firebase
+.firebase/
+
+# Profile
+.rspack-profile-*/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
