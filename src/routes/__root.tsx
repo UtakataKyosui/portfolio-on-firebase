@@ -4,6 +4,8 @@ import {
   Outlet,
   Scripts,
 } from '@tanstack/react-router';
+import { SiteFooter } from '@/components/site-footer';
+import { SiteHeader } from '@/components/site-header';
 import '../App.css';
 import '../lib/firebase';
 
@@ -24,7 +26,13 @@ function RootComponent() {
         <HeadContent />
       </head>
       <body>
-        <Outlet />
+        <div className="flex min-h-screen flex-col">
+          <SiteHeader />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <SiteFooter />
+        </div>
         <Scripts />
       </body>
     </html>
