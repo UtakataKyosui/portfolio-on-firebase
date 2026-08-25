@@ -1,7 +1,8 @@
 {
   "hosting": {
     "site": "utakata-68681",
-    "public": "dist",
+    "public": "dist/client",
+    "cleanUrls": true,
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {

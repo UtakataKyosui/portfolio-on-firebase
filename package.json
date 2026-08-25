@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "rsbuild build && node scripts/prerender.mjs",
     "check": "biome check --write",
     "dev": "rsbuild",
     "format": "biome format --write",
