@@ -1,0 +1,263 @@
+[
+  {
+    "id": "UtakataKyosui/tauri-invoke-binding",
+    "name": "tauri-invoke-binding",
+    "owner": "UtakataKyosui",
+    "description": "TauriにおけるRustとTypeScriptの処理の接続に堅安全性を足すためのライブラリの開発",
+    "language": "TypeScript",
+    "url": "https://github.com/UtakataKyosui/tauri-invoke-binding",
+    "pushedAt": "2026-08-01T03:56:46Z"
+  },
+  {
+    "id": "UtakataKyosui/ryoiki",
+    "name": "ryoiki",
+    "owner": "UtakataKyosui",
+    "description": "jj workspaceを快適に利用するためのCLI",
+    "language": "Rust",
+    "url": "https://github.com/UtakataKyosui/ryoiki",
+    "pushedAt": "2026-06-28T20:37:14Z"
+  },
+  {
+    "id": "UtakataKyosui/is-agent-friendly-ci",
+    "name": "is-agent-friendly-ci",
+    "owner": "UtakataKyosui",
+    "description": "CLIを開発する際に、それがAI-Friendly / AI-Readyかどうか確かめるためのCIです",
+    "language": "Shell",
+    "url": "https://github.com/UtakataKyosui/is-agent-friendly-ci",
+    "pushedAt": "2026-06-28T04:45:00Z"
+  },
+  {
+    "id": "UtakataKyosui/knowledge-graph",
+    "name": "knowledge-graph",
+    "owner": "UtakataKyosui",
+    "description": "Obisidianに依存しない、cmuxに合ったインタフェースで知識体系化とグラフ管理を行うための方法を模索",
+    "language": "Rust",
+    "url": "https://github.com/UtakataKyosui/knowledge-graph",
+    "pushedAt": "2026-06-11T16:42:47Z"
+  },
+  {
+    "id": "UtakataKyosui/gh-otel-harness",
+    "name": "gh-otel-harness",
+    "owner": "UtakataKyosui",
+    "description": "Claude Code の失敗履歴を OpenObserve から取得し、ハーネスリポジトリへ GitHub Issue として起票する gh 拡張機能",
+    "language": "Go",
+    "url": "https://github.com/UtakataKyosui/gh-otel-harness",
+    "pushedAt": "2026-05-08T03:09:58Z"
+  },
+  {
+    "id": "UtakataKyosui/SecondUtakata",
+    "name": "SecondUtakata",
+    "owner": "UtakataKyosui",
+    "description": "第2の泡沫",
+    "language": "Python",
+    "url": "https://github.com/UtakataKyosui/SecondUtakata",
+    "pushedAt": "2026-05-02T15:02:33Z"
+  },
+  {
+    "id": "UtakataKyosui/convex-with-auth-example",
+    "name": "convex-with-auth-example",
+    "owner": "UtakataKyosui",
+    "description": "Covex AuthがNext.js v16でまだ使えないみたいなので、しょうがなくモノレポで2パターン作ってみる",
+    "language": "TypeScript",
+    "url": "https://github.com/UtakataKyosui/convex-with-auth-example",
+    "pushedAt": "2026-04-26T15:07:58Z"
+  },
+  {
+    "id": "UtakataKyosui/gh-pr-time",
+    "name": "gh-pr-time",
+    "owner": "UtakataKyosui",
+    "description": "PR のコミット履歴から日別のアクティブ作業時間を算出・表示する gh 拡張機能",
+    "language": "Go",
+    "url": "https://github.com/UtakataKyosui/gh-pr-time",
+    "pushedAt": "2026-04-23T11:22:36Z"
+  },
+  {
+    "id": "UtakataKyosui/UtakataTechBooks",
+    "name": "UtakataTechBooks",
+    "owner": "UtakataKyosui",
+    "description": "私が技術書典で出す予定の本です",
+    "language": "CSS",
+    "url": "https://github.com/UtakataKyosui/UtakataTechBooks",
+    "pushedAt": "2026-04-05T17:12:27Z"
+  },
+  {
+    "id": "UtakataKyosui/disk-cleanup",
+    "name": "disk-cleanup",
+    "owner": "UtakataKyosui",
+    "description": "Ubuntu ディスク容量クリーンアップ マニュアル & スクリプト",
+    "language": "Shell",
+    "url": "https://github.com/UtakataKyosui/disk-cleanup",
+    "pushedAt": "2026-04-05T17:01:31Z"
+  },
+  {
+    "id": "UtakataKyosui/utakata-eco-systems",
+    "name": "utakata-eco-systems",
+    "owner": "UtakataKyosui",
+    "description": "私が開発に着手してきたエコシステムの一覧と解説を兼ねます",
+    "language": "TypeScript",
+    "url": "https://github.com/UtakataKyosui/utakata-eco-systems",
+    "pushedAt": "2026-03-24T19:04:44Z"
+  },
+  {
+    "id": "UtakataKyosui/four-day-dev",
+    "name": "four-day-dev",
+    "owner": "UtakataKyosui",
+    "description": "4日でなんか作るぞ。",
+    "language": "Rust",
+    "url": "https://github.com/UtakataKyosui/four-day-dev",
+    "pushedAt": "2026-03-23T14:33:36Z"
+  },
+  {
+    "id": "functus/functus",
+    "name": "functus",
+    "owner": "functus",
+    "description": "This project aims to implement the idea of creating a code generation tool that uses category theory to ensure the validity of program code.",
+    "language": null,
+    "url": "https://github.com/functus/functus",
+    "pushedAt": "2026-07-05T15:38:22Z"
+  },
+  {
+    "id": "almost-third-grade-in-hackathon/MusicSNS-Backend",
+    "name": "MusicSNS-Backend",
+    "owner": "almost-third-grade-in-hackathon",
+    "description": "音楽SNSのバックエンド",
+    "language": "JavaScript",
+    "url": "https://github.com/almost-third-grade-in-hackathon/MusicSNS-Backend",
+    "pushedAt": "2026-06-22T05:43:00Z"
+  },
+  {
+    "id": "functus/website",
+    "name": "website",
+    "owner": "functus",
+    "description": "Website for branding purposes",
+    "language": "MDX",
+    "url": "https://github.com/functus/website",
+    "pushedAt": "2026-06-13T03:21:59Z"
+  },
+  {
+    "id": "almost-third-grade-in-hackathon/MusicSNS-Frontend",
+    "name": "MusicSNS-Frontend",
+    "owner": "almost-third-grade-in-hackathon",
+    "description": "音楽SNSのフロントエンド",
+    "language": "TypeScript",
+    "url": "https://github.com/almost-third-grade-in-hackathon/MusicSNS-Frontend",
+    "pushedAt": "2025-02-26T14:07:01Z"
+  },
+  {
+    "id": "UtakataKyosui-College-Research/WebGraphicLearn",
+    "name": "WebGraphicLearn",
+    "owner": "UtakataKyosui-College-Research",
+    "description": "WebのGraphicの基本を学ぶ",
+    "language": null,
+    "url": "https://github.com/UtakataKyosui-College-Research/WebGraphicLearn",
+    "pushedAt": "2024-08-05T01:10:20Z"
+  },
+  {
+    "id": "UtakataKyosui-College-Research/Testing-TwoWebGraphicLibrary-AR",
+    "name": "Testing-TwoWebGraphicLibrary-AR",
+    "owner": "UtakataKyosui-College-Research",
+    "description": "2つのGraphicライブラリで同じものを作った時に、どれくらい差がでるのか検証する",
+    "language": "TypeScript",
+    "url": "https://github.com/UtakataKyosui-College-Research/Testing-TwoWebGraphicLibrary-AR",
+    "pushedAt": "2024-07-30T17:11:53Z"
+  },
+  {
+    "id": "almost-third-grade-in-hackathon/BeatLink",
+    "name": "BeatLink",
+    "owner": "almost-third-grade-in-hackathon",
+    "description": "音楽共有SNSの完成リポジトリです",
+    "language": "JavaScript",
+    "url": "https://github.com/almost-third-grade-in-hackathon/BeatLink",
+    "pushedAt": "2024-07-19T19:10:11Z"
+  },
+  {
+    "id": "tourist-project/NewHomePage",
+    "name": "NewHomePage",
+    "owner": "tourist-project",
+    "description": "Tourismの新しいホームページを開発します",
+    "language": "TypeScript",
+    "url": "https://github.com/tourist-project/NewHomePage",
+    "pushedAt": "2024-04-16T14:06:33Z"
+  },
+  {
+    "id": "Hackit-Nora-2024/KIT-Board",
+    "name": "KIT-Board",
+    "owner": "Hackit-Nora-2024",
+    "description": "学内用掲示板です",
+    "language": "TypeScript",
+    "url": "https://github.com/Hackit-Nora-2024/KIT-Board",
+    "pushedAt": "2024-03-19T01:45:46Z"
+  },
+  {
+    "id": "SumaProHackathon2023/hackathon-chromextension",
+    "name": "hackathon-chromextension",
+    "owner": "SumaProHackathon2023",
+    "description": "React×Plasmo×TypeScriptで作るChrome拡張機能",
+    "language": "TypeScript",
+    "url": "https://github.com/SumaProHackathon2023/hackathon-chromextension",
+    "pushedAt": "2023-12-03T05:28:43Z"
+  },
+  {
+    "id": "SumaProHackathon2023/hackathon",
+    "name": "hackathon",
+    "owner": "SumaProHackathon2023",
+    "description": "ハッカソンのリポジトリ",
+    "language": null,
+    "url": "https://github.com/SumaProHackathon2023/hackathon",
+    "pushedAt": "2023-12-02T05:31:58Z"
+  },
+  {
+    "id": "SumaProHackathon2023/manifest-file-doc",
+    "name": "manifest-file-doc",
+    "owner": "SumaProHackathon2023",
+    "description": "manifestファイルについてまとめました",
+    "language": null,
+    "url": "https://github.com/SumaProHackathon2023/manifest-file-doc",
+    "pushedAt": "2023-11-24T05:50:15Z"
+  },
+  {
+    "id": "tourist-project/YuwakuAR",
+    "name": "YuwakuAR",
+    "owner": "tourist-project",
+    "description": "湯涌温泉でAR体験ができるWebアプリを制作するためのリポジトリ",
+    "language": null,
+    "url": "https://github.com/tourist-project/YuwakuAR",
+    "pushedAt": "2023-07-28T10:43:24Z"
+  },
+  {
+    "id": "tourist-project/yuwaku_proto_flutter",
+    "name": "yuwaku_proto_flutter",
+    "owner": "tourist-project",
+    "description": "湯涌用アプリ",
+    "language": "Dart",
+    "url": "https://github.com/tourist-project/yuwaku_proto_flutter",
+    "pushedAt": "2023-05-01T04:57:01Z"
+  },
+  {
+    "id": "tourist-project/web_group_template",
+    "name": "web_group_template",
+    "owner": "tourist-project",
+    "description": "Web班で成果物を作成する際に基礎の設定を先に構成しておくリポジトリ",
+    "language": "CSS",
+    "url": "https://github.com/tourist-project/web_group_template",
+    "pushedAt": "2023-03-29T21:51:15Z"
+  },
+  {
+    "id": "PD2022-NottyWebAppRepo/PD-Notty-WebApp-Repository",
+    "name": "PD-Notty-WebApp-Repository",
+    "owner": "PD2022-NottyWebAppRepo",
+    "description": "PD実践用の開発リポジトリです。対よろ",
+    "language": "TypeScript",
+    "url": "https://github.com/PD2022-NottyWebAppRepo/PD-Notty-WebApp-Repository",
+    "pushedAt": "2023-01-20T07:15:31Z"
+  },
+  {
+    "id": "Home-KIT-PR/SolidTemplate",
+    "name": "SolidTemplate",
+    "owner": "Home-KIT-PR",
+    "description": "Solid.jsでテンプレート作成",
+    "language": null,
+    "url": "https://github.com/Home-KIT-PR/SolidTemplate",
+    "pushedAt": "2022-10-21T10:53:05Z"
+  }
+]
