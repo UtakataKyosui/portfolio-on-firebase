@@ -1,7 +1,19 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useMemo, useState } from 'react';
+import rawBoards from '@/data/github-project-boards.json';
 import projects from '@/data/github-projects.json';
 import { cn } from '@/lib/utils';
+
+type ProjectBoard = {
+  number: number;
+  title: string;
+  description: string | null;
+  url: string;
+  closed: boolean;
+  updatedAt: string;
+};
+
+const boards = rawBoards as ProjectBoard[];
 
 export const Route = createFileRoute('/projects')({
   head: () => ({
@@ -46,6 +58,39 @@ function FeaturedProjectsPage() {
           制作した実績を技術スタックとともに紹介しています。
         </p>
       </div>
+
+      {boards.length > 0 && (
+        <section className="flex flex-col gap-4">
+          <h2 className="font-heading font-semibold text-2xl">
+            進行中のボード
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {boards.map((board) => (
+              <a
+                key={board.number}
+                href={board.url}
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-col gap-2 rounded-lg bg-card p-5 hover:bg-card/80"
+              >
+                <div className="flex items-center gap-2">
+                  <h3 className="font-medium">{board.title}</h3>
+                  {board.closed && (
+                    <span className="rounded-full bg-muted px-2 py-0.5 text-muted-foreground text-xs">
+                      完了
+                    </span>
+                  )}
+                </div>
+                {board.description && (
+                  <p className="text-foreground/70 text-sm">
+                    {board.description}
+                  </p>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="flex flex-wrap justify-center gap-2">
         {FILTERS.map((filter) => (
