@@ -26,3 +26,6 @@ src/routeTree.gen.ts
 
 # MCP local config (contains API keys)
 .mcp.json
+
+# Claude Code session summaries
+session-summaries/
