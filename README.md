@@ -6,13 +6,13 @@
 
 | 領域 | 採用技術 |
 |---|---|
-| ビルド・ルーティング | Rsbuild、TanStack Start、TanStack Router |
+| ビルド・ルーティング | Vite、TanStack Start、TanStack Router |
 | UI | React 19 |
 | スタイリング | Tailwind CSS |
-| ホスティング | Firebase Hosting |
+| ホスティング | Cloudflare Workers への移行中（現時点では自動デプロイを停止している） |
 | コンテンツ・認証 | Firebase Firestore、Firebase Auth |
 | lint・format | Biome、rslint |
-| テスト | rstest |
+| テスト | Vitest |
 
 ## コンテンツ構成
 
@@ -24,12 +24,7 @@
 
 ## デプロイ
 
-Firebase Hostingへのデプロイは以下のコマンドで行う。事前に`firebase login`でログインしておく。
-
-```bash
-pnpm build
-firebase deploy --only hosting
-```
+ホスティング基盤をFirebase HostingからCloudflare Workersへ移行している最中であり、現時点では自動デプロイを停止している。Cloudflare Workers向けのデプロイパイプラインは別Issueで構築する。
 
 ## セットアップ
 

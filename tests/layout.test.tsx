@@ -1,4 +1,3 @@
-import { expect, test } from '@rstest/core';
 import {
   createMemoryHistory,
   createRootRoute,
@@ -7,6 +6,7 @@ import {
   RouterProvider,
 } from '@tanstack/react-router';
 import { fireEvent, render, screen } from '@testing-library/react';
+import { expect, test } from 'vitest';
 import { SiteFooter } from '../src/components/site-footer';
 import { SiteHeader } from '../src/components/site-header';
 

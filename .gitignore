@@ -16,6 +16,9 @@ src/routeTree.gen.ts
 # Firebase
 .firebase/
 
+# Cloudflare Workers (wrangler dev)
+.wrangler/
+
 # Profile
 .rspack-profile-*/
 

@@ -8,14 +8,13 @@
 
 ## Docs
 
-- Rsbuild: https://rsbuild.rs/llms.txt
-- Rspack: https://rspack.rs/llms.txt
+- Vite: https://vite.dev/llms.txt
+- Vitest: https://vitest.dev/llms.txt
 - Rslint: https://rslint.rs/llms.txt
 
 ### Rslint
 
 - Run `pnpm run lint` to lint your code
-- Rstest: https://rstest.rs/llms.txt
 
 ## Tools
 
@@ -24,7 +23,7 @@
 - Run `pnpm run lint` to lint your code
 - Run `pnpm run format` to format your code
 
-### Rstest
+### Vitest
 
 - Run `pnpm run test` to run tests
 - Run `pnpm run test:watch` to run tests in watch mode
