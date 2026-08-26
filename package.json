@@ -12,6 +12,7 @@
     "lint": "rslint",
     "preview": "rsbuild preview",
     "sync:projects": "node scripts/sync-github-projects.mjs",
+    "sync:project-boards": "node scripts/sync-github-project-boards.mjs",
     "test": "rstest",
     "test:watch": "rstest --watch"
   },
