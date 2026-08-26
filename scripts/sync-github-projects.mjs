@@ -56,11 +56,16 @@ function toProject(repo) {
   };
 }
 
+function hasWorkTopic(repo) {
+  return (repo.topics ?? []).includes('work');
+}
+
 function isPresentable(repo) {
   return (
     !repo.fork &&
     !repo.archived &&
     !EXCLUDED.has(repo.name) &&
+    !hasWorkTopic(repo) &&
     Boolean(repo.description) &&
     Boolean(repo.language)
   );
@@ -78,7 +83,13 @@ const orgRepos = (
   )
 )
   .flat()
-  .filter((repo) => !repo.fork && !repo.archived && Boolean(repo.description))
+  .filter(
+    (repo) =>
+      !repo.fork &&
+      !repo.archived &&
+      !hasWorkTopic(repo) &&
+      Boolean(repo.description),
+  )
   .map(toProject)
   .sort(byPushedAtDesc);
 

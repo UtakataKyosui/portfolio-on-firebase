@@ -9,15 +9,6 @@
     "pushedAt": "2026-08-01T03:56:46Z"
   },
   {
-    "id": "UtakataKyosui/ryoiki",
-    "name": "ryoiki",
-    "owner": "UtakataKyosui",
-    "description": "jj workspaceを快適に利用するためのCLI",
-    "language": "Rust",
-    "url": "https://github.com/UtakataKyosui/ryoiki",
-    "pushedAt": "2026-06-28T20:37:14Z"
-  },
-  {
     "id": "UtakataKyosui/is-agent-friendly-ci",
     "name": "is-agent-friendly-ci",
     "owner": "UtakataKyosui",
@@ -106,6 +97,15 @@
     "language": "Rust",
     "url": "https://github.com/UtakataKyosui/four-day-dev",
     "pushedAt": "2026-03-23T14:33:36Z"
+  },
+  {
+    "id": "UtakataKyosui/GearMesh",
+    "name": "GearMesh",
+    "owner": "UtakataKyosui",
+    "description": "TypeScriptとRustとの型共有を行うためのクレート",
+    "language": "Rust",
+    "url": "https://github.com/UtakataKyosui/GearMesh",
+    "pushedAt": "2026-03-23T06:39:01Z"
   },
   {
     "id": "functus/functus",
