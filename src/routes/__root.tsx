@@ -28,11 +28,12 @@ export const Route = createRootRoute({
   }),
   beforeLoad: async () => {
     // TanStack Start のサーバーランタイム外 (Vitest 等) では createServerFn の
-    // 呼び出し自体が AsyncLocalStorage エラーを投げるため無視する
+    // 呼び出し自体が AsyncLocalStorage エラーを投げるため、ナビゲーションは
+    // 止めずにログだけ残す
     try {
       await checkCloudflareBinding();
-    } catch {
-      // no-op
+    } catch (error) {
+      console.error('[cloudflare-binding-check] failed', error);
     }
   },
   component: RootComponent,

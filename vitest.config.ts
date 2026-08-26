@@ -1,14 +1,12 @@
-import tailwindcss from '@tailwindcss/vite';
-import { tanstackStart } from '@tanstack/react-start/plugin/vite';
-import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
+import { sharedPlugins } from './vite.shared-plugins';
 
 export default defineConfig({
   envPrefix: 'PUBLIC_',
   resolve: {
     tsconfigPaths: true,
   },
-  plugins: [tanstackStart(), react({ compiler: true }), tailwindcss()],
+  plugins: sharedPlugins(),
   test: {
     environment: 'happy-dom',
     setupFiles: ['./tests/vitest.setup.ts'],
