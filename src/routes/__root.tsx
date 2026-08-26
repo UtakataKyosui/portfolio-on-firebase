@@ -8,7 +8,6 @@ import { createServerFn } from '@tanstack/react-start';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import '../App.css';
-import '../lib/firebase';
 
 // Issue #33 の binding 疎通確認用。後続 Issue で実際の binding (D1/R2) の確認に置き換える予定。
 const checkCloudflareBinding = createServerFn({ method: 'GET' }).handler(
