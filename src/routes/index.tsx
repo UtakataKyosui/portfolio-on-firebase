@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
+import projects from '@/data/github-projects.json';
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -41,26 +42,7 @@ const LATEST_POSTS = [
   },
 ] as const;
 
-const FEATURED_PROJECTS = [
-  {
-    slug: 'nexus-analytics-platform',
-    name: 'Nexus Analytics Platform',
-    summary: 'リアルタイム分析ダッシュボード',
-    tags: ['Vue.js', 'D3.js', 'Node.js'],
-  },
-  {
-    slug: 'aura-commerce',
-    name: 'Aura Commerce',
-    summary: 'ヘッドレスコマースソリューション',
-    tags: ['Next.js', 'GraphQL', 'Tailwind CSS'],
-  },
-  {
-    slug: 'synapse-mesh',
-    name: 'Synapse Mesh',
-    summary: 'ピア・ツー・ピアネットワークライブラリ',
-    tags: ['Rust', 'WebAssembly', 'React'],
-  },
-] as const;
+const FEATURED_PROJECTS = projects.slice(0, 3);
 
 function HomePage() {
   return (
@@ -126,20 +108,26 @@ function HomePage() {
         <div className="grid gap-4 sm:grid-cols-3">
           {FEATURED_PROJECTS.map((project) => (
             <article
-              key={project.slug}
+              key={project.id}
               className="flex flex-col gap-2 rounded-lg bg-card p-5"
             >
-              <h3 className="font-medium">{project.name}</h3>
-              <p className="text-foreground/70 text-sm">{project.summary}</p>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium hover:underline"
+              >
+                {project.name}
+              </a>
+              <p className="text-foreground/70 text-sm">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-2 pt-1">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-muted px-2 py-0.5 text-muted-foreground text-xs"
-                  >
-                    {tag}
+                {project.language && (
+                  <span className="rounded-full bg-muted px-2 py-0.5 text-muted-foreground text-xs">
+                    {project.language}
                   </span>
-                ))}
+                )}
               </div>
             </article>
           ))}

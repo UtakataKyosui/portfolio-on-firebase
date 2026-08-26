@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useMemo, useState } from 'react';
+import projects from '@/data/github-projects.json';
 import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/projects')({
@@ -15,48 +16,23 @@ export const Route = createFileRoute('/projects')({
   component: FeaturedProjectsPage,
 });
 
-const FILTERS = ['All', 'Web', 'Platform', 'Mobile', 'Open Source'] as const;
+const OWNER = 'UtakataKyosui';
 
-const PROJECTS = [
-  {
-    slug: 'nexus-analytics-platform',
-    name: 'Nexus Analytics Platform',
-    summary: 'リアルタイム分析ダッシュボード',
-    tags: ['Vue.js', 'D3.js', 'Node.js'],
-    category: 'Platform',
-  },
-  {
-    slug: 'aura-commerce',
-    name: 'Aura Commerce',
-    summary: 'ヘッドレスコマースソリューション',
-    tags: ['Next.js', 'GraphQL', 'Tailwind CSS'],
-    category: 'Web',
-  },
-  {
-    slug: 'synapse-mesh',
-    name: 'Synapse Mesh',
-    summary: 'ピア・ツー・ピアネットワークライブラリ',
-    tags: ['Rust', 'WebAssembly', 'React'],
-    category: 'Open Source',
-  },
-  {
-    slug: 'focusflow',
-    name: 'FocusFlow',
-    summary: '生産性向上のためのタスク管理ツール',
-    tags: ['SvelteKit', 'TypeScript', 'PostgreSQL'],
-    category: 'Mobile',
-  },
-] as const;
+const FILTERS = ['すべて', '個人', 'チーム開発'] as const;
+
+type Filter = (typeof FILTERS)[number];
+
+function matchesFilter(project: (typeof projects)[number], filter: Filter) {
+  if (filter === 'すべて') return true;
+  const isPersonal = project.owner === OWNER;
+  return filter === '個人' ? isPersonal : !isPersonal;
+}
 
 function FeaturedProjectsPage() {
-  const [activeFilter, setActiveFilter] =
-    useState<(typeof FILTERS)[number]>('All');
+  const [activeFilter, setActiveFilter] = useState<Filter>('すべて');
 
   const filteredProjects = useMemo(
-    () =>
-      activeFilter === 'All'
-        ? PROJECTS
-        : PROJECTS.filter((project) => project.category === activeFilter),
+    () => projects.filter((project) => matchesFilter(project, activeFilter)),
     [activeFilter],
   );
 
@@ -93,20 +69,29 @@ function FeaturedProjectsPage() {
       <div className="grid gap-4 sm:grid-cols-2">
         {filteredProjects.map((project) => (
           <article
-            key={project.slug}
+            key={project.id}
             className="flex flex-col gap-2 rounded-lg bg-card p-5"
           >
-            <h2 className="font-medium">{project.name}</h2>
-            <p className="text-foreground/70 text-sm">{project.summary}</p>
-            <div className="flex flex-wrap gap-2 pt-1">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-muted px-2 py-0.5 text-muted-foreground text-xs"
-                >
-                  {tag}
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium hover:underline"
+            >
+              {project.name}
+            </a>
+            <p className="text-foreground/70 text-sm">{project.description}</p>
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              {project.language && (
+                <span className="rounded-full bg-muted px-2 py-0.5 text-muted-foreground text-xs">
+                  {project.language}
                 </span>
-              ))}
+              )}
+              {project.owner !== OWNER && (
+                <span className="rounded-full bg-muted px-2 py-0.5 text-muted-foreground text-xs">
+                  {project.owner}
+                </span>
+              )}
             </div>
           </article>
         ))}
