@@ -1,5 +1,7 @@
 # Cloudflare Workers デプロイ用シークレットの設定
 
+本番URL: https://portfolio-on-firebase.utakata.workers.dev
+
 `cloudflare-deploy.yml`（main への push で本番デプロイ）と `cloudflare-preview.yml`（PR でプレビューデプロイ）は、リポジトリの GitHub Secrets に登録した `CLOUDFLARE_API_TOKEN` と `CLOUDFLARE_ACCOUNT_ID` を使う。
 
 ## CLOUDFLARE_API_TOKEN の発行
