@@ -1,10 +1,10 @@
-import { expect, test } from '@rstest/core';
 import {
   createMemoryHistory,
   createRouter,
   RouterProvider,
 } from '@tanstack/react-router';
 import { fireEvent, render, screen } from '@testing-library/react';
+import { expect, test } from 'vitest';
 import { routeTree } from '../src/routeTree.gen';
 
 test('renders the blog list page with articles and handles category filtering', async () => {

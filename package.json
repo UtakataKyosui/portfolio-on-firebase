@@ -5,16 +5,16 @@
   "type": "module",
   "packageManager": "pnpm@11.23.0",
   "scripts": {
-    "build": "rsbuild build && node scripts/prerender.mjs",
+    "build": "vite build",
     "check": "biome check --write",
-    "dev": "rsbuild",
+    "dev": "vite",
     "format": "biome format --write",
     "lint": "rslint",
-    "preview": "rsbuild preview",
+    "preview": "vite preview",
     "sync:projects": "node scripts/sync-github-projects.mjs",
     "sync:project-boards": "node scripts/sync-github-project-boards.mjs",
-    "test": "rstest",
-    "test:watch": "rstest --watch"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -33,20 +33,22 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
-    "@rsbuild/core": "^2.1.13",
-    "@rsbuild/plugin-react": "^2.1.0",
-    "@rsbuild/plugin-tailwindcss": "^2.0.3",
+    "@cloudflare/vite-plugin": "^1.53.1",
     "@rslint/core": "^0.6.5",
-    "@rstest/adapter-rsbuild": "^0.11.6",
-    "@rstest/core": "^0.11.6",
+    "@tailwindcss/vite": "^4.3.3",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
     "happy-dom": "^20.11.2",
+    "oxc-transform-react": "^0.147.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.125.0"
   }
 }
