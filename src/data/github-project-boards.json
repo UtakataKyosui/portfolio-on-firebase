@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "number": 9,
+    "title": "@UtakataKyosui's Personal Projects",
+    "description": null,
+    "url": "https://github.com/users/UtakataKyosui/projects/9",
+    "closed": true,
+    "updatedAt": "2026-07-13T08:53:48Z"
+  },
+  {
+    "number": 17,
+    "title": "PDIM",
+    "description": "個人開発のアイデア・横断 R&D・複数リポジトリのタスク管理",
+    "url": "https://github.com/users/UtakataKyosui/projects/17",
+    "closed": false,
+    "updatedAt": "2026-05-02T15:03:08Z"
+  },
+  {
+    "number": 25,
+    "title": "OpenModels",
+    "description": "Entity-schema-first planning for bridging OpenAPI, ORM models, and migrations",
+    "url": "https://github.com/users/UtakataKyosui/projects/25",
+    "closed": false,
+    "updatedAt": "2026-03-19T09:01:22Z"
+  }
+]
